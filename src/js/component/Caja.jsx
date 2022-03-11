@@ -2,6 +2,7 @@ import React, { useState } from "react";
 const Caja = () => {
 	const [inputText, setInputText] = useState("");
 	const [table, setTable] = useState([]);
+
 	const addText = (text) => {
 		let newText = [...table, text];
 		setTable(newText);
@@ -48,8 +49,8 @@ const Caja = () => {
 								</button>
 							</li>
 						))}
-						<tr>
-							<th scope="col">ToDo-s List</th>
+						<tr className="badge bg-light text-dark me-2">
+							Total Todo List: {table.length}
 						</tr>
 					</ul>
 				</table>
