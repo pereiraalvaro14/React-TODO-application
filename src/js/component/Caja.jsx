@@ -8,7 +8,12 @@ const Caja = () => {
 		setTable(newText);
 	};
 	const handleKey = (e) => {
-		if (e.key === "Enter" && inputText !== " " && inputText !== "") {
+		if (
+			e.key === "Enter" &&
+			inputText !== " " &&
+			inputText !== "" &&
+			!table.includes(inputText)
+		) {
 			addText(inputText);
 			setInputText("");
 		}
